@@ -26,6 +26,56 @@
       </header>
       <section>
         <h3>
+<a name="making-a-class" class="anchor" href="#making-a-class"><span class="octicon octicon-link"></span></a>Making a Class</h3>
+
+<p>So everything is pretty plain language created in coffee-script. Creating a class is as easy as "class ClasName" and giving it a constructor with some attributes.</p>
+
+<p>uncompiled info_print.coffee</p>
+
+<div class="highlight highlight-coffee"><pre><span class="k">class</span> <span class="nx">Info</span>
+
+    <span class="nv">constructor: </span><span class="nf">(@attributes)-&gt;</span>
+
+    <span class="nv">printInfo: </span><span class="nf">-&gt;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"Name: </span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="s">"</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"Title: </span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="s">"</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"DOB: </span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">dob</span><span class="si">}</span><span class="s">"</span>
+        <span class="k">if</span> <span class="nx">@attributes</span><span class="p">.</span><span class="nx">salary</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"Salary: </span><span class="si">#{</span><span class="nx">@attributes</span><span class="p">.</span><span class="nx">salary</span><span class="si">}</span><span class="s">"</span>
+        <span class="k">else</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"Salary: Unknown"</span>
+
+<span class="nv">ryan = </span><span class="k">new</span> <span class="nx">Info</span>
+    <span class="nv">name: </span><span class="s">"Ryan"</span>
+    <span class="nv">title: </span><span class="s">"Tech"</span>
+    <span class="nv">dob: </span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">1988</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nv">salary: </span><span class="s">"$1,000,000"</span>
+
+<span class="nv">ross = </span><span class="k">new</span> <span class="nx">Info</span>
+    <span class="nv">name: </span><span class="s">"Ross S."</span>
+    <span class="nv">title: </span><span class="s">"VP"</span>
+    <span class="nv">dob: </span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">1985</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="nx">ryan</span><span class="p">.</span><span class="nx">printInfo</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">" "</span>
+<span class="nx">ross</span><span class="p">.</span><span class="nx">printInfo</span><span class="p">()</span>
+</pre></div>
+
+<p>after is compiled and run:</p>
+
+<pre><code>$ node info_print.js
+Name: Ryan
+Title: Tech
+DOB: Wed Mar 02 1988 00:00:00 GMT+0000 (UTC)
+Salary: $1,000,000
+
+Name: Ross S.
+Title: VP
+DOB: Thu Aug 15 1985 00:00:00 GMT+0000 (UTC)
+Salary: Unknown
+</code></pre>
+
+<h3>
 <a name="hello-world" class="anchor" href="#hello-world"><span class="octicon octicon-link"></span></a>Hello World</h3>
 
 <p>Turns out a hello world script is pretty easy in coffee script. </p>
