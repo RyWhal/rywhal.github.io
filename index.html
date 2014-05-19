@@ -26,6 +26,35 @@
       </header>
       <section>
         <h3>
+<a name="object-shortcuts" class="anchor" href="#object-shortcuts"><span class="octicon octicon-link"></span></a>Object shortcuts</h3>
+
+<p>Objects are really straight forward and awesome in coffee-script. You can very dynamically create an object that holds a lot of information. Also, there is no need for all those silly commas in array declarations (if you put each item on its own line).</p>
+
+<p>for example:</p>
+
+<div class="highlight highlight-coffee"><pre><span class="nv">user =</span>
+    <span class="nv">name: </span><span class="s">"Ryan Whalen"</span>
+    <span class="nv">username: </span><span class="s">"RyWhal"</span>
+    <span class="nv">age: </span><span class="mi">26</span>
+
+    <span class="c1">#No Commas in the array declaration </span>
+    <span class="nv">Aliases: </span><span class="p">[</span>
+        <span class="s">'RyWhal'</span>
+        <span class="s">'RJPW'</span>
+    <span class="p">]</span>
+    <span class="nv">websites: </span><span class="p">[</span>
+        <span class="s">'ryanwhalen.me'</span>
+        <span class="s">'slur.pe'</span>
+        <span class="s">'blackholeoftheinternet.com'</span>
+        <span class="s">'rywhal.github.io'</span>
+    <span class="p">]</span>
+
+    <span class="c1">#or you can use commas</span>
+    <span class="nv">emails: </span><span class="p">[</span><span class="s">'ryan@ryan.com'</span><span class="p">,</span><span class="s">'whalen@whalen.com'</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">user</span>
+</pre></div>
+
+<h3>
 <a name="i-needed-some-encouragement" class="anchor" href="#i-needed-some-encouragement"><span class="octicon octicon-link"></span></a>I needed some encouragement</h3>
 
 <p>An array of encouragements and some math for a random entry will do nicely</p>
