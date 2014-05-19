@@ -26,6 +26,28 @@
       </header>
       <section>
         <h3>
+<a name="chaining-operators" class="anchor" href="#chaining-operators"><span class="octicon octicon-link"></span></a>Chaining Operators</h3>
+
+<p>chaining operators together allows a lot of saved keystrokes in coffee. </p>
+
+<p>in coffee:</p>
+
+<div class="highlight highlight-coffee"><pre><span class="nx">mynumber</span><span class="o">=</span><span class="mi">34</span>
+
+<span class="k">if</span> <span class="mi">25</span> <span class="o">&lt;=</span> <span class="nx">mynumber</span> <span class="o">&lt;=</span> <span class="mi">50</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"its between 24 and 50"</span>
+<span class="k">else</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"its greater than 50 or less than 24"</span>
+</pre></div>
+
+<p>The same operators in JS would look like this:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="k">if</span> <span class="p">((</span><span class="mi">24</span> <span class="o">&lt;=</span> <span class="nx">mynumber</span> <span class="o">&amp;&amp;</span> <span class="nx">mynumber</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">)){</span>
+<span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<hr><h3>
 <a name="no-commas-if-you-want" class="anchor" href="#no-commas-if-you-want"><span class="octicon octicon-link"></span></a>No commas! (if you want)</h3>
 
 <p>Objects + arrays are really straight forward and awesome in coffee-script. But the best part there is no need for all those silly commas in array declarations (if you put each item on its own line).</p>
