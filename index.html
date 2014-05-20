@@ -26,6 +26,45 @@
       </header>
       <section>
         <h3>
+<a name="using-heregexes" class="anchor" href="#using-heregexes"><span class="octicon octicon-link"></span></a>Using Heregexes</h3>
+
+<p>A "heregex" is essentially your basic regex, except that hergexes can contain comments and white space. An example of using a heregex might look something like this:</p>
+
+<div class="highlight highlight-coffee"><pre><span class="c1">#define your URLs (some that work, some that dont)</span>
+<span class="nv">urls= </span><span class="p">[</span>
+    <span class="s">"http://rywhal.github.io"</span>
+    <span class="s">"https://google.com"</span>
+    <span class="s">"htp://something.com"</span>
+    <span class="s">"http://slur.pe"</span>
+    <span class="s">"soemthing.com"</span>
+    <span class="s">"thisisastring"</span>
+<span class="p">]</span>
+
+<span class="c1">#define the regex pattern</span>
+<span class="nv">pattern= </span><span class="sr">///</span>
+<span class="sr">    https?:</span>
+<span class="sr">    #see? you can have comments in here</span>
+<span class="sr">    [a-zA-Z0-9-.]*</span>
+<span class="sr">    /.*</span>
+<span class="sr">///</span>
+
+<span class="c1">#loop through URLs and validate against pattern</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"Valid URLs:"</span>
+<span class="k">for</span> <span class="nx">url</span> <span class="k">in</span> <span class="nx">urls</span>
+    <span class="k">if</span> <span class="nx">url</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">pattern</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">url</span>
+</pre></div>
+
+<p>This scripts output:</p>
+
+<pre><code>$ coffee heregexes.coffee
+Valid URLs:
+http://rywhal.github.io
+https://google.com
+http://slur.pe
+</code></pre>
+
+<hr><h3>
 <a name="chaining-operators" class="anchor" href="#chaining-operators"><span class="octicon octicon-link"></span></a>Chaining Operators</h3>
 
 <p>chaining operators together allows a lot of saved keystrokes in coffee. </p>
@@ -116,18 +155,18 @@
 
 <p>output:</p>
 
-<div class="highlight highlight-sh"><pre>~/Projects/coffee ⌚ 16:44:56
-<span class="nv">$ </span>coffee encourage.coffee
+<pre><code>~/Projects/coffee ⌚ 16:44:56
+$ coffee encourage.coffee
 Woooooo!
 
 ~/Projects/coffee ⌚ 16:45:02
-<span class="nv">$ </span>coffee encourage.coffee
-You can <span class="k">do </span>it.
+$ coffee encourage.coffee
+You can do it.
 
 ~/Projects/coffee ⌚ 16:45:04
-<span class="nv">$ </span>coffee encourage.coffee
-You<span class="err">'</span>re doing great!
-</pre></div>
+$ coffee encourage.coffee
+You're doing great!
+</code></pre>
 
 <hr><h3>
 <a name="making-classes-and-functions" class="anchor" href="#making-classes-and-functions"><span class="octicon octicon-link"></span></a>Making Classes and Functions</h3>
