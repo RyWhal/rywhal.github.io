@@ -181,6 +181,30 @@ DOB: Thu Aug 15 1985 00:00:00 GMT+0000 (UTC)
 Salary: Unknown
 </code></pre>
 
+<hr><h2>
+<a name="string-interpretation" class="anchor" href="#string-interpretation"><span class="octicon octicon-link"></span></a>String interpretation</h2>
+
+<p>Coffee allows you to cleanly and easily concatenate strings together and within each other. for example:</p>
+
+<div class="highlight highlight-coffee"><pre><span class="nv">make = </span><span class="s">"Toyota"</span>
+<span class="nv">model = </span><span class="s">"Camry"</span>
+<span class="nv">year = </span><span class="mi">2012</span>
+
+<span class="nv">concat= </span><span class="s">"My car is a </span><span class="si">#{</span><span class="nx">year</span><span class="si">}</span><span class="s"> </span><span class="si">#{</span><span class="nx">make</span><span class="si">}</span><span class="s"> </span><span class="si">#{</span><span class="nx">model</span><span class="si">}</span><span class="s">"</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">concat</span>
+</pre></div>
+
+<p>In javascript, the concatenation would look something like this:</p>
+
+<div class="highlight highlight-javascript"><pre>  <span class="nx">make</span> <span class="o">=</span> <span class="s2">"Toyota"</span><span class="p">;</span>
+  <span class="nx">model</span> <span class="o">=</span> <span class="s2">"Camry"</span><span class="p">;</span>
+  <span class="nx">year</span> <span class="o">=</span> <span class="mi">2012</span><span class="p">;</span>
+  <span class="nx">concat</span> <span class="o">=</span> <span class="s2">"My car is a "</span> <span class="o">+</span> <span class="nx">year</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">make</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">model</span><span class="p">;</span>
+</pre></div>
+
+<p>Clearly coffee-script allows you to do this in a much cleaner manner.</p>
+
 <hr><h3>
 <a name="hello-world" class="anchor" href="#hello-world"><span class="octicon octicon-link"></span></a>Hello World</h3>
 
