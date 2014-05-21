@@ -26,6 +26,35 @@
       </header>
       <section>
         <h3>
+<a name="math-functions" class="anchor" href="#math-functions"><span class="octicon octicon-link"></span></a>Math Functions</h3>
+
+<p>Here are some math functions... Its pretty self explanitory</p>
+
+<div class="highlight highlight-coffee"><pre><span class="nv">add = </span><span class="nf">(a, b)-&gt;</span><span class="o">\</span>
+    <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+<span class="nv">subtract = </span><span class="nf">(a, b)-&gt;</span><span class="o">\</span>
+    <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+<span class="nv">divide = </span><span class="nf">(a, b)-&gt;</span><span class="o">\</span>
+    <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
+<span class="nv">multiply = </span><span class="nf">(a, b)-&gt;</span><span class="o">\</span>
+    <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"1 + 2 = "</span><span class="o">+</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"3 - 4 = "</span><span class="o">+</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"5 / 6 = "</span><span class="o">+</span><span class="nx">divide</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"7 * 8 = "</span><span class="o">+</span><span class="nx">multiply</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+<p>and its output:</p>
+
+<pre><code>$ coffee maths.coffee
+1 + 2 = 3
+3 - 4 = -1
+5 / 6 = 0.8333333333333334
+7 * 8 = 56
+</code></pre>
+
+<hr><h3>
 <a name="using-heregexes" class="anchor" href="#using-heregexes"><span class="octicon octicon-link"></span></a>Using Heregexes</h3>
 
 <p>A "heregex" is essentially your basic regex, except that hergexes can contain comments and white space. An example of using a heregex might look something like this:</p>
